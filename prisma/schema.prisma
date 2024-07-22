@@ -70,8 +70,8 @@ model ExerciseTime {
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
-  weight        Int         @default(0)
-  repeat        Int         @default(0)
+  weight        Int          @default(0)
+  repeat        Int          @default(0)
   isCompleted   Boolean      @default(false) @map("is_completed")
   exerciseLog   ExerciseLog? @relation(fields: [exerciseLogId], references: [id])
   exerciseLogId Int?         @map("exercise_log_id")
